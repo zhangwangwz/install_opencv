@@ -26,10 +26,10 @@ sudo apt-get install -y qtcreator libqt5serialport5-dev qtmultimedia5-dev libeig
 # download the latest version
 cd ~ 
 sudo rm -rf opencv*
-#wget -O opencv.zip https://github.com/opencv/opencv/archive/4.5.5.zip 
-#wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.5.5.zip 
-cp /mnt/share/opencv-4.5.5.zip .
-cp /mnt/share/opencv_contrib-4.5.5.zip .
+wget -O opencv.zip https://github.com/opencv/opencv/archive/4.5.5.zip 
+wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.5.5.zip 
+#cp /mnt/share/opencv-4.5.5.zip .
+#cp /mnt/share/opencv_contrib-4.5.5.zip .
 mv opencv-4.5.5.zip opencv.zip
 mv opencv_contrib-4.5.5.zip opencv_contrib.zip
 # unpack
