@@ -7,3 +7,4 @@ Usage:
 sudo chmod 755 ./install_opencv.sh
 bash install_opencv.sh
 ```
+opencv==4.5.5
