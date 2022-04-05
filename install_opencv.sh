@@ -13,14 +13,13 @@ sudo apt-get install -y libgtk2.0-dev libcanberra-gtk* libgtk-3-dev
 sudo apt-get install -y libgstreamer1.0-dev gstreamer1.0-gtk3
 sudo apt-get install -y libgstreamer-plugins-base1.0-dev gstreamer1.0-gl libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
 sudo apt-get install -y libxvidcore-dev libx264-dev
-sudo apt-get install -y python3-dev python3-numpy python3-pip
 sudo apt-get install -y libtbb2 libtbb-dev libdc1394-22-dev
 sudo apt-get install -y libv4l-dev v4l-utils
 sudo apt-get install -y libopenblas-dev libatlas-base-dev libblas-dev
 sudo apt-get install -y liblapack-dev gfortran libhdf5-dev
-sudo apt-get install -y libprotobuf-dev libgoogle-glog-dev libgflags-dev
+sudo apt-get install -y libprotobuf-dev libgoogle-glog-dev libgflags-dev python3-dev
 sudo apt-get install -y protobuf-compiler libngraph0 libngraph0-dev ngraph-gtk ngraph-gtk-addins*
-sudo apt-get install -y qtcreator libqt5serialport5-dev qtmultimedia5-dev libeigen3-dev libvtkgdcm-dev libopenblas-dev libtbb-dev
+sudo apt-get install -y qtcreator libqt5serialport5-dev qtmultimedia5-dev libeigen3-dev libvtkgdcm-dev libopenblas-dev libtbb-dev libxcb-xinerama0 libxkbcommon-dev libxkbcommon-x11-dev libxkbcommon-x11-0 libxkbcommon0
 
 
 # download the latest version
@@ -43,7 +42,7 @@ mv opencv-4.5.5 opencv
 mv opencv_contrib-4.5.5 opencv_contrib
 
 pip install --upgrade pip
-pip install --user cython numpy networkx defusedxml protobuf test-generator keras
+pip install cython numpy networkx defusedxml protobuf test-generator keras --upgrade
 
 # set install dir
 cd ~/opencv
@@ -85,7 +84,7 @@ sudo make install
 sudo ldconfig
 
 # cleaning (frees 300 MB)
-make clean
+#make clean
 sudo apt-get update
 
 echo "Congratulations!"
