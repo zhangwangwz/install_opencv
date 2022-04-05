@@ -8,3 +8,5 @@ sudo chmod 755 ./install_opencv.sh
 bash install_opencv.sh
 ```
 opencv==4.5.5
+
+Change https://github.com/zhangwangwz/install_opencv/blob/3989276448ad505f299118dfc02b5cc06c77be1d/install_opencv.sh#L75-https://github.com/zhangwangwz/install_opencv/blob/3989276448ad505f299118dfc02b5cc06c77be1d/install_opencv.sh#L76 to disable Inference Engine (openvino)
