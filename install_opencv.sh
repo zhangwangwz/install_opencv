@@ -5,7 +5,7 @@ echo "It will take minimal 2.0 hour !"
 cd ~
 # install the dependencies
 sudo apt-get update
-sudo apt-get dist-upgrade
+sudo apt-get dist-upgrade -y
 sudo apt-get install -y build-essential cmake git unzip pkg-config default-jdk
 sudo apt-get install -y libjpeg-dev libtiff-dev libpng-dev
 sudo apt-get install -y libavcodec-dev libavformat-dev libswscale-dev
@@ -19,7 +19,7 @@ sudo apt-get install -y libopenblas-dev libatlas-base-dev libblas-dev
 sudo apt-get install -y liblapack-dev gfortran libhdf5-dev
 sudo apt-get install -y libprotobuf-dev libgoogle-glog-dev libgflags-dev python3-dev
 sudo apt-get install -y protobuf-compiler libngraph0 libngraph0-dev ngraph-gtk ngraph-gtk-addins*
-sudo apt-get install -y qtcreator libqt5serialport5-dev qtmultimedia5-dev libeigen3-dev libvtkgdcm-dev libopenblas-dev libtbb-dev libxcb-xinerama0 libxkbcommon-dev libxkbcommon-x11-dev libxkbcommon-x11-0 libxkbcommon0
+sudo apt-get install -y qtcreator libqt5serialport5-dev qtmultimedia5-dev libeigen3-dev libvtkgdcm-dev libopenblas-dev libtbb-dev libxcb-xinerama0 libxkbcommon-dev libxkbcommon-x11-dev libxkbcommon-x11-0 libxkbcommon0 libomxil-bellagio-dev
 
 
 # download the latest version
@@ -72,6 +72,9 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D INSTALL_PYTHON_EXAMPLES=ON \
 -D PYTHON3_PACKAGES_PATH=/usr/lib/python3/dist-packages \
 -D OPENCV_GENERATE_PKGCONFIG=ON \
+-D OPENCV_ENABLE_PKG_CONFIG=ON \
+-D PYTHON3_INCLUDE_PATH=/usr/include/python3.9 \
+-D PKG_CONFIG_EXECUTABLE=/usr/bin/arm-linux-gnueabihf-pkg-config \
 -D WITH_INF_ENGINE=ON \
 -D INF_ENGINE_RELEASE=2022010000 \
 -D WITH_NGRAPH=ON \
