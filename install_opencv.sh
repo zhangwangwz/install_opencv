@@ -20,7 +20,7 @@ sudo apt-get install -y liblapack-dev gfortran libhdf5-dev
 sudo apt-get install -y libprotobuf-dev libgoogle-glog-dev libgflags-dev python3-dev
 sudo apt-get install -y protobuf-compiler libngraph0 libngraph0-dev ngraph-gtk ngraph-gtk-addins*
 sudo apt-get install -y qtcreator libqt5serialport5-dev qtmultimedia5-dev libeigen3-dev libvtkgdcm-dev libopenblas-dev libtbb-dev libxcb-xinerama0 libxkbcommon-dev libxkbcommon-x11-dev libxkbcommon-x11-0 libxkbcommon0 libomxil-bellagio-dev
-
+sudo apt-get install -y libx265-dev
 
 # download the latest version
 cd ~ 
