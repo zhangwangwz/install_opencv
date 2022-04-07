@@ -13,5 +13,5 @@ Change line [75-76](https://github.com/zhangwangwz/install_opencv/blob/398927644
 
 If you want to add Inference Engine, please make sure that you have run setupvars.sh provided by openvino to initialize openvino environment
 ```shell
-source /path/to/setupvars.sh
+source /path/to/openvino/setupvars.sh
 ```
