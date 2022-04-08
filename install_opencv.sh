@@ -6,21 +6,20 @@ cd ~
 # install the dependencies
 sudo apt-get update
 sudo apt-get dist-upgrade -y
-sudo apt-get install -y build-essential cmake git unzip pkg-config default-jdk
-sudo apt-get install -y libjpeg-dev libtiff-dev libpng-dev
-sudo apt-get install -y libavcodec-dev libavformat-dev libswscale-dev
-sudo apt-get install -y libgtk2.0-dev libcanberra-gtk* libgtk-3-dev
-sudo apt-get install -y libgstreamer1.0-dev gstreamer1.0-gtk3
-sudo apt-get install -y libgstreamer-plugins-base1.0-dev gstreamer1.0-gl libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
-sudo apt-get install -y libxvidcore-dev libx264-dev
-sudo apt-get install -y libtbb2 libtbb-dev libdc1394-22-dev
-sudo apt-get install -y libv4l-dev v4l-utils
-sudo apt-get install -y libopenblas-dev libatlas-base-dev libblas-dev
-sudo apt-get install -y liblapack-dev gfortran libhdf5-dev
-sudo apt-get install -y libprotobuf-dev libgoogle-glog-dev libgflags-dev python3-dev
-sudo apt-get install -y protobuf-compiler libngraph0 libngraph0-dev ngraph-gtk ngraph-gtk-addins*
-sudo apt-get install -y qtcreator libqt5serialport5-dev qtmultimedia5-dev libeigen3-dev libvtkgdcm-dev libopenblas-dev libtbb-dev libxcb-xinerama0 libxkbcommon-dev libxkbcommon-x11-dev libxkbcommon-x11-0 libxkbcommon0 libomxil-bellagio-dev
-sudo apt-get install -y libx265-dev
+sudo apt-get install -y build-essential cmake git unzip pkg-config default-jdk \
+libjpeg-dev libtiff-dev libpng-dev \
+libavcodec-dev libavformat-dev libswscale-dev \
+libgtk2.0-dev libcanberra-gtk* libgtk-3-dev \
+libgstreamer1.0-dev gstreamer1.0-gtk3 \
+libgstreamer-plugins-base1.0-dev gstreamer1.0-gl libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev \
+libxvidcore-dev libx264-dev libtbb2 libtbb-dev libdc1394-22-dev \
+libv4l-dev v4l-utils libopenblas-dev libatlas-base-dev libblas-dev \
+liblapack-dev gfortran libhdf5-dev libprotobuf-dev libgoogle-glog-dev libgflags-dev python3-dev \
+protobuf-compiler libngraph0 libngraph0-dev ngraph-gtk ngraph-gtk-addins* \
+qtcreator libqt5serialport5-dev qtmultimedia5-dev libeigen3-dev libvtkgdcm-dev \
+libopenblas-dev libtbb-dev libxcb-xinerama0 libxkbcommon-dev \
+libxkbcommon-x11-dev libxkbcommon-x11-0 libxkbcommon0 libomxil-bellagio-dev libx265-dev
+
 
 # download the latest version
 cd ~ 
