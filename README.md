@@ -1,6 +1,12 @@
 # install_opencv
 Inspired by https://github.com/Qengineering/Install-OpenCV-Raspberry-Pi-64-bits/
 
+Please refer to https://github.com/zhangwangwz/install-ffmpeg to install ffmpeg before install opencv. Or you may run
+
+```shell
+sudo apt-get install ffmpeg
+```
+
 Usage:
 
 ```shell
