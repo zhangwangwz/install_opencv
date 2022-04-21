@@ -6,22 +6,29 @@ cd ~
 # install the dependencies
 sudo apt-get update
 sudo apt-get dist-upgrade -y
-sudo apt-get install -y build-essential cmake git unzip pkg-config default-jdk \
+sudo apt-get install -y build-essential cmake git unzip pkg-config default-jdk cmake-curses-gui yasm meson git-all \
 libjpeg-dev libtiff-dev libpng-dev \
 libavcodec-dev libavformat-dev libswscale-dev \
 libgtk2.0-dev libcanberra-gtk* libgtk-3-dev \
 libgstreamer1.0-dev gstreamer1.0-gtk3 \
 libgstreamer-plugins-base1.0-dev gstreamer1.0-gl libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev \
-libxvidcore-dev libx264-dev libtbb2 libtbb-dev libdc1394-22-dev \
+libxvidcore-dev libtbb2 libtbb-dev libdc1394-22-dev \
 libv4l-dev v4l-utils libopenblas-dev libatlas-base-dev libblas-dev \
 liblapack-dev gfortran libhdf5-dev libprotobuf-dev libgoogle-glog-dev libgflags-dev python3-dev \
 protobuf-compiler libngraph0 libngraph0-dev ngraph-gtk ngraph-gtk-addins* \
 qtcreator libqt5serialport5-dev qtmultimedia5-dev libeigen3-dev libvtkgdcm-dev \
 libopenblas-dev libtbb-dev libxcb-xinerama0 libxkbcommon-dev \
-libxkbcommon-x11-dev libxkbcommon-x11-0 libxkbcommon0 libomxil-bellagio-dev libx265-dev
+libxkbcommon-x11-dev libxkbcommon-x11-0 libxkbcommon0 libxmp4 libgavl-dev libgmp-dev \
+ladspa-sdk libaom-dev libaribb24-dev lv2-dev libsndfile-dev libiec61883-dev libavc1394-dev \
+libass-dev libbluray-dev libbs2b-dev libcaca-dev libcodec2-dev dav1d libdrm-dev libfdk-aac-dev \
+flite libgme-dev libjack-dev spirv-tools liblensfun-dev libmodplug-dev libmp3lame-dev \
+libopencore-amrnb-dev libopencore-amrwb-dev libopenmpt-dev libpulse-dev \
+libwebp-dev libzstd-dev librabbitmq-dev libmysofa-dev librist* librsvg* librubberband* \
+librtmp-dev libshine-dev libsmbclient-dev libsnappy-dev libsoxr-dev libspeex-dev \
+libsrt-openssl-dev libssh-dev libtheora-dev libtlsh-dev libtwolame-dev libvidstab-dev \
+libvo-amrwbenc-dev libvpx-dev libxcb* libzimg* libzmq3-dev libzvbi-dev 
 
-
-# download the latest version
+# download the latest version of opencv
 cd ~ 
 sudo rm -rf opencv*
 wget -O opencv.zip https://github.com/opencv/opencv/archive/4.5.5.zip 
@@ -75,7 +82,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D PYTHON3_INCLUDE_PATH=/usr/include/python3.9 \
 -D PKG_CONFIG_EXECUTABLE=/usr/bin/arm-linux-gnueabihf-pkg-config \
 -D WITH_INF_ENGINE=ON \
--D INF_ENGINE_RELEASE=2022010000 \
+-D INF_ENGINE_RELEASE=2022020000 \
 -D WITH_NGRAPH=ON \
 -D WITH_GPHOTO2=ON \
 -D BUILD_EXAMPLES=ON ..
@@ -89,5 +96,10 @@ sudo ldconfig
 #make clean
 sudo apt-get update
 
-echo "Congratulations!"
-echo "You've successfully installed OpenCV 4.5.5 on your Raspberry Pi 64-bit OS"
+python -c "import cv2"
+if [ $? -ne 0 ];then
+	echo "Failed to install OpenCV, aborting."
+else
+	echo "Congratulations!"
+	echo "You've successfully installed OpenCV 4.5.5 on your Raspberry Pi 64-bit OS"
+fi
